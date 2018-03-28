@@ -1,0 +1,120 @@
+// .c-pagination {
+//     @include clearfix();
+//     font-size: 0;
+//     list-style: none;
+//     text-align: center;
+//
+//     > li {
+//         display: inline-block;
+//         font-size: $font-base-size;
+//         margin: 0 $spacing-sm;
+//         vertical-align: middle;
+//
+//         &:first-child {
+//             margin-left: 0;
+//         }
+//
+//         &:last-child {
+//             margin-right: 0;
+//         }
+//     }
+//
+//     .c-btn {
+//         min-width: 64px;
+//     }
+// }
+//
+//
+//     .c-pagination__item {
+//         margin-top: $button-h
+//     }
+//
+//
+//     .c-pagination__first {
+//         float: left;
+//         text-align: left;
+//         max-width: 40%;
+//     }
+//
+//
+//     .c-pagination__last {
+//         float: right;
+//         text-align: right;
+//         max-width: 40%;
+//     }
+//
+//
+// .c-pagination--inline {
+//     display: inline-block;
+// }
+//
+//
+
+
+
+.c-pagination {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    list-style: none;
+    margin: 0;
+}
+
+    .c-pagination__item {
+        display: flex;
+        margin: 0 $spacing-xs;
+
+        > a {
+            align-self: center;
+            display: block;
+            padding: 0 $spacing-sm
+        }
+
+        &.is--active {
+            > a {
+                background-color: $haze-300;
+                border-radius: $base-radius;
+                color: $font-muted-color;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+
+    .c-pagination__first,
+    .c-pagination__previous:first-child {
+        flex: 1;
+    }
+
+    .c-pagination__last,
+    .c-pagination__next:last-child {
+        flex: 1;
+        text-align: right;
+    }
+
+    .c-pagination__first,
+    .c-pagination__previous, {
+        margin-right: $spacing-sm;
+    }
+
+    .c-pagination__last,
+    .c-pagination__next, {
+        margin-left: $spacing-sm;
+    }
+
+
+.c-pagination--inline {
+    display: inline-flex;
+}
+
+
+.c-pagination--content {
+    a {
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover .c-pagination__title {
+            color: $font-link-color;
+            text-decoration: underline;
+        }
+    }
+}

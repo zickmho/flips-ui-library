@@ -1,0 +1,27 @@
+
+
+
+.u-container {
+    @include clearfix();
+    margin: 0 auto;
+    max-width: $base-container;
+    padding-left: $container-desktop-spacing;
+    padding-right: $container-desktop-spacing;
+    width: 100%;
+}
+
+.u-container--fluid {
+    max-width: 100%;
+    padding-left: $spacing-lg;
+    padding-right: $spacing-lg;
+}
+
+
+@if responsive {
+    @include media-query('mobile') {
+        .u-container {
+            padding-left: $container-mobile-spacing;
+            padding-right: $container-mobile-spacing;
+        }
+    }
+}

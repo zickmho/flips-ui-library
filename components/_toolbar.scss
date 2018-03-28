@@ -1,0 +1,22 @@
+.c-toolbar {
+    background-color: $white;
+    padding-bottom: $spacing-md;
+    padding-top: $spacing-md;
+    padding-left: 64px;
+    @extend .u-shadow-1dp;
+}
+
+    .c-toolbar__tile {
+        height: 40px;
+    }
+
+
+    .c-toolbar__title {
+        margin: 0;
+
+        > li {
+            font-size: 18px;
+            font-weight: $font-weight-semibold;
+            line-height: 24px;
+        }
+    }

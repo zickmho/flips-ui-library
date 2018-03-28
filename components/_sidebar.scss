@@ -1,0 +1,79 @@
+.c-sidebar {
+    background-color: $blue-700;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    left: 0;
+    padding: $spacing-md 0;
+    position: fixed;
+    top: 0;
+    width: 64px;
+    z-index: $z-index-toolbar;
+}
+
+.c-sidebar__menu {
+    &.is--bottom {
+        margin-top: auto;
+    }
+
+    > li {
+        > a {
+            align-items: center;
+            border-radius: 100%;
+            display: flex;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            outline: 0 !important;
+            text-decoration: none !important;
+            width: 40px;
+
+            &:hover {
+                background-color: rgba($dark-700, .2);
+            }
+        }
+
+        .icon {
+            color: $white;
+            display: block;
+            line-height: inherit;
+        }
+
+        .has--badge:after {
+            border-color: $blue-700;
+        }
+    }
+}
+
+.has--badge {
+    position: relative;
+
+    &:after {
+        background-color: $red-400;
+        border-radius: 100%;
+        border: 2px solid transparent;
+        color: $white;
+        content: attr(data-badge);
+        display: block;
+        height: 24px;
+        line-height: 20px;
+        font-size: 11px;
+        position: absolute;
+        right: -4px;
+        top: -2px;
+        text-align: center;
+        width: 24px;
+    }
+}
+
+.has--badge:not([data-badge]),
+.has--badge[data-badge=""] {
+    &:after {
+        border: 0;
+        content: attr(data-badge);
+        height: 8px;
+        right: 2px;
+        top: 2px;
+        width: 8px;
+    }
+}

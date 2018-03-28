@@ -1,0 +1,128 @@
+.c-card,
+.c-postcard {
+    background-color: $white;
+    border-radius: $base-radius;
+    @include shadow-1dp;
+
+    .is--filled {
+        background-color: $haze-100;
+    }
+}
+
+.c-card__image,
+.c-card__head,
+.c-card__body,
+.c-card__action {
+    padding-top: $card-spacing-vertical;
+    @include clearfix();
+}
+
+.c-card__head,
+.c-card__body,
+.c-card__action {
+    padding-left: $card-spacing-horizontal;
+    padding-right: $card-spacing-horizontal;
+
+    &:last-child {
+        padding-bottom: $card-spacing-vertical;
+    }
+}
+
+.c-card__image {
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.c-card__head:first-child,
+.c-card__image:first-child img{
+    border-top-left-radius: $base-radius;
+    border-top-right-radius: $base-radius;
+}
+
+.c-card__action:last-child,
+.c-card__image:last-child img {
+    border-bottom-left-radius: $base-radius;
+    border-bottom-right-radius: $base-radius;
+}
+
+
+
+
+.c-postcard {
+    display: flex;
+    max-width: 740px;
+}
+
+.c-postcard__image {
+    flex: 3;
+    padding: $spacing-sm 0 $spacing-sm $spacing-sm;
+}
+
+.c-postcard__brief {
+    background-color: $haze-100;
+    border-radius: 0 $base-radius $base-radius 0;
+    flex: 3;
+    order: 3;
+    padding: $spacing-md;
+}
+
+.c-postcard__content {
+    flex: 4;
+    padding: $spacing-md;
+}
+
+.c-postcard__action {
+    text-decoration: none !important;
+
+    &:hover {
+        color: $font-link-color;
+
+        .icon {
+            color: $font-base-color;
+        }
+
+        .o-tile__body {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.c-postcard--hotdeal {
+    box-shadow: 0 0 0 1px $red-200;
+
+    h2 > a {
+        color: $red-500;
+    }
+
+    .c-postcard__image {
+        .o-embed {
+            background-color: $red-200;
+        }
+    }
+
+    .c-postcard__brief {
+        background-color: $red-100;
+
+        .u-divider {
+            color: $red-200;
+        }
+
+        .u-color-muted {
+            color: $red-400;
+        }
+    }
+
+    .c-postcard__label {
+        color: $red-500;
+
+        .icon {
+            color: $red-300;
+        }
+    }
+
+    .c-btn  {
+        background-color: $red-400;
+    }
+}
